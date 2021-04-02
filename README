@@ -1,0 +1,9 @@
+Structure of the project
+
+--> preprocessing.py deals with the preprocessing stage of the method (read the code and comments);
+--> generateMasks.py deals with the generation of binary masks of the annotations and creates an auxiliar file that will be useful during training in creating the set of samples of interest;
+--> mainLoop.py is the loop used to train the system for all the folds with validation included;
+--> pytorch_util includes auxiliary functions that are called in the mainLoop.py;
+--> pytorchClasses.py includes classes derived from Pytorch Objects used to load data faster as well as our Custom U-Net implementation that adds a BatchNormalization layer and a Sigmoid Layer at the beginning and end of the U-Net (defined in unet.py);
+--> debugVisualResults helped in generating and visualizing intermediate results;
+--> generateLearningCurve.py and testFolds.py were used to collect results.
